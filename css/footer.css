@@ -1,0 +1,35 @@
+footer.ch-footer {
+    font-size: 16px;
+    background: #272e4f;
+    padding: 8em 0 1em 0;
+    color:white;
+}
+footer.ch-footer a {
+    color: rgba(165, 164, 164, 0.7);
+}
+
+footer .social-media{
+    justify-content: space-around;
+    padding: 10px 5px;
+    background-color: #272e4fee;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+footer .social-media a{
+    display: block;
+    transition: color .5s ease linear;
+    }
+footer .social-media li:hover a{
+    color: white;
+    }
+    
+    
+footer li, footer p{
+        color:rgba(165, 164, 164, 0.7)
+    }
+footer .logo a{
+        color: white;
+    }
+footer .contact-detail li{
+        padding-bottom: 15px;
+    }

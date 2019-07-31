@@ -1,0 +1,131 @@
+
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE********START*********/
+.church-nav.scrolled .nav-item.bulletin a.nav-link{
+    color: #ff5656 !important;
+    border-bottom: 1px solid  #ff5656;
+  }
+  .church-nav .nav-item.bulletin a.nav-link{
+    color: white !important;
+    border-bottom: 1px solid  white;
+  }
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE**********END*******/
+
+.bulletin-hero{
+    background:url("../images/hero/bulletin.png") no-repeat;
+    background-position:center;
+    background-size:cover;
+    width:100%;
+    padding: 7em 0 2em;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+}
+.bulletin-content-text{
+   width: 100%;
+   padding: 10px;
+}
+.bulletin-content-text p{
+    color:#f7f7f7;
+    line-height: 2;
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+.bulletin-content-text a.bulletin-button{
+    display: inline-block;
+    color: #fff;
+    background-color: #31a736;
+    margin: 0px 0px 10px;
+    padding: 5px 10px;
+    cursor: auto;
+
+}
+ @media only screen and (min-width: 760px){
+.bulletin-content-text {
+    background:linear-gradient(90deg,rgba(51,51,51,.9) 0%,rgba(51,51,51,0.4) 100%);
+}
+
+.bulletin-page .sidebar{
+    border-left:1px solid rgba(46, 44, 46, 0.144);
+    height: 100%;
+}
+}
+@media only screen and (max-width: 759px){
+.bulletin-content-text {
+    background: rgba(51,51,51,0.2);
+    position: relative;
+    bottom: -40px;
+    z-index: 5;
+}
+.bulletin-hero{
+    background-position: -500px center;
+}
+}
+
+.bulletin-hero .bulletin-title{
+    color: white;
+    text-align: center;
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+/******bulllettin section********/
+.bulletin-page{
+    padding:2em 0 5em;
+}
+.bulletin{
+    overflow: hidden;
+}
+
+.bulletin li, ul.bulletin{
+    list-style: none;
+    display: block;
+    padding-left: 0;
+}
+.bulletin li{
+   border: .001em solid rgba(0, 0, 0, 0.247);
+   margin-bottom: 15px;
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+   border-radius: 2px 0 2px 0;
+}
+.bulletin li a{
+    text-decoration: none
+}
+.bulletin li:nth-child(2n-1){
+    background: #ECEFF1;
+    border-radius:0 2px 0 2px;
+}
+
+.bulletin-item .icon{
+    color: rgba(119, 0, 0, 0.822);
+}
+
+.bulletin-item .bulletin-details{
+    width: calc(100% - 60px);
+    position: relative;
+    padding: 5px
+}
+.bulletin-control{
+    margin: 10px;
+    border-bottom:1px solid black;
+    border-bottom-right-radius:5px; 
+    border-bottom-left-radius: 5px
+}
+.bulletin-control .form-control{
+    outline: none !important;
+    box-shadow: none;
+}
+
+
+.bulletin-item h5.bulletin-title{
+    margin: 0;
+    padding: 5px;
+}
+.bulletin-item p.bulletin-desc{
+    padding:0;
+    margin: 0;
+    width: 100%;
+}

@@ -1,0 +1,40 @@
+.overlay-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(45deg, #08c299 0%, #090089 100%);
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+}
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,1);
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+}
+.row.no-spacing{
+    margin-left: 0;
+    margin-right: 0;
+}
+.no-spacing> [class*="col-"]{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.vh{
+    height: 100vh;
+}
+.vh .fullHight, .vh .slide-item{
+    height: 100%;
+}   
+.wrapper{
+    padding: 6em 0;
+    text-align: center
+}
+.parallax{
+    background-attachment: fixed !important;
+}

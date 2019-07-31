@@ -1,0 +1,549 @@
+/****generic styling start****/
+.vh{
+    height: 100vh;
+}
+.vh .fullHeight{
+    height: 100%;;
+}
+.btn{
+    box-shadow: none !important
+}
+.form-control{
+    box-shadow: none !important
+}
+.row.no-spacing,.side-bar .container-fluid{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.no-spacing > [class*="col-"],.side-bar .container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+ul>li{
+    display: block;
+   
+}
+body{
+    background: aliceblue;
+}
+/****generic styling end****/
+
+.admin-wrp{
+    width: 100%;
+}
+
+.icon-menu{
+    width: 50px !important;
+    z-index: 2;
+    box-shadow: 1px 0 5px 0 rgba(0,0,0,0.16);
+}
+.menu-closed{
+    width: 230px;
+    margin-left:0;
+    position: relative;
+    transition:margin-left .3s ease-in;
+    background-image: linear-gradient(0deg, rgba(24, 80, 80, 0.418) 0%,rgba(19, 104, 104, 0.76) 75% ,rgb(3, 145, 145) 100%);
+}
+
+.side-bar{
+    height: 100%;
+    position: fixed;
+    display: flex;
+
+}
+
+
+.side-collapsed .menu-closed{
+  margin-left: -230px;
+}
+
+
+.side-collapsed .admin-canvas{
+    width: calc(100% - 35px);
+    margin-left: 55px;
+}
+
+.side-collapsed .developer{
+     transform: rotate(-90deg);
+     bottom: 48px !important;
+     background: black !important;
+     width: 150px !important;
+     font-size: 60% !important;
+     border-bottom-right-radius: 50px;
+     margin-left: 168px !important;
+     opacity: 1;
+}
+.side-collapsed .menu-collapse{
+        right: -10px;
+        background-color: black;
+        z-index: 10;
+        transition: background-color .15s ease-in
+}
+.side-collapsed .menu-collapse span:before{
+    content:"\f101"
+   }
+
+.side-collapsed .menu-collapse:hover{
+     background-color: rgb(114, 112, 112);
+}
+
+
+
+
+.admin-canvas section{
+    margin: 0 15px;
+}
+.side-collapsed .admin-canvas section{
+    margin-left: 30px;
+}
+
+
+
+
+
+
+.developer{
+   position: absolute;
+   bottom: 5px;
+   width: 100%;
+   text-align: center;
+   color:white;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 80%;;
+   padding: 5px;
+   border:1px solid rgba(255, 255, 255, 0.137);
+   background: rgba(105, 105, 105, 0.315);
+   transform-origin:center ;
+   transition: margin-left .3s ease-in .3s;
+}
+.developer a{
+    color: white
+}
+
+
+
+
+/**********aside content*************/
+
+.list-title {
+    perspective: 1000px;   
+}
+.list-title .title{
+transform-origin: center;
+transform: rotate(-90deg) translate(-23px,0);
+padding: 30px 0;
+flex-direction: column;
+line-height: 1.2;
+text-transform: uppercase;
+color: rgb(151, 165, 177);
+
+
+}
+.list-title .title span:first-child{
+font-size: 10px;
+}
+.list-title .title span:last-child{
+font-size: 10px;
+letter-spacing: 2px
+}
+/**********main content*************/
+.admin-canvas{
+    width: calc(100% - 280px);
+    margin-left: 280px;
+    transition: margin-left .3s ease-in,opacity .3s ease-in;
+}
+@media(max-width:767px) and (orientation:portrait){
+    .admin-canvas:not(.side-collapsed){
+        opacity: 0;
+    }
+}
+
+/**********main content****end*********/
+
+.action-content>a,.action>a{
+    text-decoration: none
+}
+
+
+
+.action{
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.151);
+}
+.action a{
+    color: rgb(35, 161, 161);
+    display: block;
+    height: 100%;
+    padding: 10px 0;
+}
+.action.active {
+    background-color: rgba(170, 250, 250, 0.493);
+}
+.action.active a{
+    color: rgb(135, 243, 243);
+}
+.action span{
+    font-size: 25px
+}
+.action:last-child{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.151);
+}
+
+
+
+
+.branded{
+    padding: 30px 0;
+   position: relative;
+}
+.branded .logo{
+    background: url(../images/christian-cross.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    padding: 0 30px;
+}
+.branded .brand-text{
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+}
+.brand-text span{
+    font-size: 15px;
+}
+
+
+.action-manage:first-child{
+    border-top: 1px solid rgba(255,255,255,0.1)
+}
+.action-manage{
+    padding: 9.7px 0;
+    color: aliceblue;
+    border-bottom: 1px solid rgba(255,255,255,0.1)
+}
+.action-manage.active{
+    background: aliceblue;
+    color: black;
+}
+.action-manage.active .icon{
+    color: black;
+}
+.action-manage .icon{
+   font-size: 18px;
+   padding: 6px 25px;
+   color: white
+}
+
+
+.menu-collapse{
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: rgba(211, 208, 208, 0.459);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    border-radius:5px;
+    cursor: pointer;
+    transition:right .3s ease-in;
+    border:2px solid aliceblue;
+}
+
+
+.menu-collapse span:before{
+ transition: all .3s ease
+}
+
+.menu-collapse span:before{
+ content:"\f100"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-wrp .row{
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.add-n-manage-row{
+    padding: 0 !important;
+    margin-top: 40px !important;
+}
+.add-n-manage-row >[class*="col-"]:first-child{
+    padding: 0 !important;
+    
+}
+
+
+
+.tab-control{
+    text-align: center;
+    padding:5px 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+.tab-control button{
+    border: 1px solid rgba(0,0,0,0.1);
+    background: none;
+    border-radius: 15px;
+    padding: 0;
+}
+.tab-control button a{
+   text-decoration: none;
+   display: block;
+   padding: 10px;
+   height: 100%;
+   color: black;
+}
+.tab-control button:not(.active){
+    border: none
+}
+.tab-control button.active{
+margin-bottom: -1px;
+border-bottom: 1px solid transparent;
+background: aliceblue;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.church-table th{
+text-align: center;
+text-transform: uppercase;
+background: black;
+color: white;
+}
+
+
+thead th{
+    white-space: nowrap;
+}
+tbody td{
+    font-size: 85%;
+    padding:.26rem  .6rem !important;
+    vertical-align: middle !important;
+    font-weight: bold;
+}
+tbody td[title]{
+    cursor: help;
+}
+td.date-col,
+td.repeat-col{
+    text-align: center;
+}
+
+.crud{
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: none !important;
+}
+
+.crud span{
+    font-weight: bold;
+    color:#17a3b885;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.crud span:hover{
+color: #17a2b8
+}
+.crud .wk-garbage:hover{
+color: red !important
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.add-event,.add-sermon,.add-bulletin{
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+.form-wrp{
+    border: 1px solid rgba(0,0,0,0.1);
+    padding-top: 2em;
+    border-radius: 5px;
+
+}
+
+#msg-alert.alert .dismiss{
+  cursor: pointer !important;
+}
+
+.repeat-for:not(.show),
+.occurency:not(.show),
+.until:not(.show),
+.publish:not(.show),
+.weekdays:not(.show),
+.weekofmonth:not(.show),
+.interval:not(.show),
+.interval:not(.show) label:not(.show),
+.interval label:not(.show),
+.every-label:not(.show){
+    display: none;
+}
+
+
+.sermon-result,
+.event-result,
+.bulletin-result{
+    display: block;
+}
+
+
+
+
+.countdown-wrapper p{
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.countdown-wrapper p small{
+    font-size: 60%;
+    display: block;
+}
+
+.countdown-wrapper p .countdown{
+    font-size: 60%
+}
+
+.allday{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.page-link.disabled{
+    background-color: grey;
+    color: white;
+    border: none !important;
+    z-index: 1 !important;
+}
+.p-relative{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  
+}
+.section{
+    padding: 20px 0;
+}
+.section-item{
+    display: inline-block;
+    padding: 30px;
+    padding: 10vmin;
+    margin-bottom: 5px;
+    box-shadow: 1px 0 5px 0 rgba(0,0,0,0.16)
+}
+
+
+.search-form input,
+.search-form button{
+    border:none;
+    border-bottom: 1px solid #3ba3b8;
+    border-radius: 0;
+}
+.search-form input{
+    background: none;
+}
+.search-form .search-btn{
+   padding-left: 0;
+}
+.search-form .Search-io{
+   padding-right: 0;
+}
+
+
+
+
+/*setup page styles*/
+
+.setting-title{
+    border-radius: 0;
+}
+.setting-title h5{
+    width: 80%;
+    font-size:large
+}
+.setup.show .setting-title {
+border-bottom: 2px solid orange;
+}
+.fa.fa-times,.setting-body{
+    transition: all .2s ease-in
+}
+.setup:not(.show) .setting-body.hide{
+    opacity: 0;
+    display: none;
+}
+
+.setup:not(.show) .fa-times{
+    transform: rotate(45deg);
+}
+
+.relative{
+    position: relative;
+}
+
+.abs{
+    position: absolute;
+    z-index: 5;
+}

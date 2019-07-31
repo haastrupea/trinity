@@ -1,0 +1,200 @@
+    .church-nav{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:30px;
+        background: none !important;
+        z-index: 999;
+        padding-bottom: 10px;
+        
+    }
+     
+    .church-nav a.nav-link{
+       font-size: 16px;
+       font-weight: 500;
+       padding-left: 1rem !important;
+       padding-right: 1rem !important;
+    }
+    .church-nav.scrolled{
+    position: fixed;
+      background-color: white !important;
+      top:0;
+      margin-top: -100px;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    }
+    .church-nav.scrolled.activate{
+        margin-top: 0;
+        transition: all .3s ease-in;
+    }
+    .church-nav.scrolled.deactivate{
+      transition: all .3s ease-in;
+    }
+    .church-nav.scrolled a{
+      color: black !important;
+    }
+    
+    .church-nav.scrolled a.nav-link:hover{
+      color: #ec7d7d !important;
+    }
+    .church-nav a.church-logo{
+      color: white;
+    }
+    @media (max-width: 991.98px){
+    .church-nav{
+        top: 0;
+        position: relative;
+    }
+    .church-nav.bg-dark{
+        background: #000 !important;
+    }
+    .church-nav.scrolled.ch-navbar-light{
+        background: #fff !important;
+    }
+    .church-nav.scrolled button{
+        border: none;
+        color: rgba(0, 0, 0, 0.5) !important;
+        border-color: rgba(150, 148, 148, 0.5) !important;
+    }
+    .church-nav button{
+        cursor: pointer;
+        letter-spacing: .1em;
+    }
+    }
+    @media (min-width: 992.00px){
+    .church-nav .container{
+      border-bottom: .05em solid rgba(255, 255, 255, 0.39);
+      padding-bottom: 15px;
+    }
+  
+    }
+    .church-nav .church-logo{
+        width: 50px;
+        height: 50px;
+        display:inline-block !important
+    }
+    
+
+
+
+
+    /******for mobile view nav only*******/
+    .church-nav .navbar-toggler{
+      position: relative;
+      padding: 10px 15px;
+      outline: none
+  }
+    .navbar-toggler .navbar-collapse{
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 6px
+  }
+ 
+    .navbar-toggler .navbar-nav{
+      overflow: hidden !important;
+  }
+    .navbar-toggler .navbar-collapse::before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 0;
+      border-right: .5em solid transparent;
+      border-bottom: .5em solid rgba(47, 79, 79, 0.822);
+      border-left: .5em solid transparent;
+      top: -5px;
+
+  }
+  .navbar-toggler .navbar-collapse .nav-item {
+     width: 180px;
+     margin-bottom: 5px;
+     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+     background: rgba(47, 79, 79, 1);
+
+  }
+  .navbar-toggler .navbar-collapse .nav-item:hover a{
+    background:rgb(70, 116, 116);
+    color: white !important
+  }
+ .navbar-toggler .show{
+    display: none;
+    transition: all 1s ease-in-out;
+  }
+  .navbar-toggler:hover .show{
+    display: block;
+    animation: fadeInUpMenu .2s linear forwards;
+  }
+
+
+
+
+
+/*****about drop down on hover styles*****/
+
+  .about-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .about-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 2em 1em;
+  }
+
+ .about-dropdown-content a{
+    color: black !important;
+  }
+
+  .about-dropdown-content::before{
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: -8px;
+      border: 10px solid transparent;
+      border-right: 10px solid white;
+      border-top: 10px solid white;
+      width: 0;
+      height: 0;
+      transform: rotate(-45deg);
+
+  }
+  .about-dropdown:hover .about-dropdown-content {
+      display: inline-block;
+      background-color:white;
+      width:80vw;
+      position:absolute;
+      top: 100%;
+      right: 10px;
+}
+nav span.about-readmore-btn{
+  display: inline-block;
+  color: #fff;
+  background-color: #31a736;
+  margin: 0px 0px 10px;
+  padding: 5px 10px;
+  cursor:pointer;
+
+}
+
+/*****about drop down on hover styles** END***/
+
+.church-nav.scrolled .brand-text{
+border-left: 1px solid rgba(0,0, 0, 0.507);
+}
+
+.church-nav .brand-text{
+border-left: 1px solid rgba(255, 255, 255, 0.507);
+padding-left: 10px;
+overflow: hidden;
+}
+.church-nav .brand-text span:first-child{
+font-size: 30px;
+line-height: .9
+}
+.church-nav .brand-text span:last-child{
+letter-spacing: 5px;
+}

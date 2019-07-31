@@ -1,0 +1,44 @@
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE********START*********/
+.church-nav.scrolled .nav-item.events a.nav-link{
+    color: #ff5656 !important;
+    border-bottom: 1px solid  #ff5656;
+  }
+  .church-nav .nav-item.events a.nav-link{
+    color: white !important;
+    border-bottom: 1px solid  white;
+  }
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE**********END*******/
+
+
+.event-hero-container{
+  background:url("../images/hero/event.jpg") no-repeat; 
+  background-position:center top;
+  background-size:cover;
+  padding: 12em 0;
+  overflow: hidden;
+}
+.event-hero-container .row{
+ height: 100%;
+}
+.event-hero-container span{
+  color:white;
+  font-weight: bold;
+  font-size:40px;
+}
+
+.event-section{
+padding: 6em 0 8em
+}
+
+
+/****NEXT EVENT/COUNTDOWN SECTION**start**/
+.next-on-calender{
+  margin-top:1px;
+}
+/****NEXT EVENT/COUNTDOWN SECTION**end**/
+
+
+.eventa0 p{
+  padding: 10px;
+  margin-top: 5px;
+}

@@ -1,0 +1,75 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 29/03/2019 16:26
+  	*/
+
+@font-face {
+  font-family: "wikytek";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "wikytek";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="wk-"]:before, [class*=" wk-"]:before,
+[class^="wk-"]:after, [class*=" wk-"]:after {   
+  font-family: wikytek;
+font-style: normal;
+}
+
+.wk-counselling:before { content: "\f100"; }
+/* .wk-assigment:before { content: "\f100"; } */
+.wk-worship:before { content: "\f101"; }
+.wk-sermon:before { content: "\f102"; }
+.wk-prayer:before { content: "\f103"; }
+.wk-support:before { content: "\f104"; }
+/* .wk-counselling:before { content: "\f105"; } */
+
+.wk {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; }
+.wk-1x {
+  font-size: 1em; }
+
+.wk-2x {
+  font-size: 2em; }
+
+.wk-3x {
+  font-size: 3em; }
+
+.wk-4x {
+  font-size: 4em; }
+
+.wk-5x {
+  font-size: 5em; }
+
+.wk-6x {
+  font-size: 6em; }
+
+.wk-7x {
+  font-size: 7em; }
+
+.wk-8x {
+  font-size: 8em; }
+
+.wk-9x {
+  font-size: 9em; }
+
+.wk-10x {
+  font-size: 10em; }

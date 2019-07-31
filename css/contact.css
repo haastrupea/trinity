@@ -1,0 +1,49 @@
+
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE********START*********/
+.church-nav.scrolled .nav-item.contact a.nav-link{
+    color: #ff5656 !important;
+    border-bottom: 1px solid  #ff5656;
+  }
+  .church-nav .nav-item.contact a.nav-link{
+    color: white !important;
+    border-bottom: 1px solid  white;
+  }
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE**********END*******/
+
+.contact-hero-container{
+    background:url("../images/map_ife.png") no-repeat; 
+    background-position:center bottom;
+    background-size:cover;
+    padding: 10em 0;
+    overflow: hidden;
+}
+.contact-hero-container .row{
+   height: 100%;
+}
+.contact-hero-container span{
+    color:white;
+    font-weight: bold;
+    font-size:40px;
+}
+
+
+.contact-info{
+    color: #4D4D4D;
+    font-family: sans-serif;
+    margin-top:-80px;
+    font-size:14px;
+    position: relative;
+    padding: 0 15px 10em;
+}
+
+.contact-section .contact-info p a {
+    color: #1a1a1a;
+}
+
+.form-group .btn {
+    background-color: #343a40;
+    box-shadow: 5px 5px 0px 0px #57697b;
+}
+.contact-us{
+    font-family: 'Times New Roman', Times, serif;
+}

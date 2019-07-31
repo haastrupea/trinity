@@ -1,0 +1,111 @@
+
+/**HOME>>>NEXT CALENDER/countdown SECTION**START******/
+
+.next-on-calender{
+    background: #000000;
+    margin-top: -160px;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.next-on-calender .container{
+    padding: 30px;
+}
+@media(min-width:767.98px){
+    .calender-description{
+        border-right: 1px solid rgba(255,255,255,0.1);
+        padding-right: 30px;
+      }
+      
+}
+@media(max-width:767.98px){
+    .countdown{
+        padding: 0;
+        margin-bottom: 30px;
+      }
+    .countdown-wrapper{
+        width: 100% !important;
+      }
+
+      .next-on-calender{
+          margin-top: -67px
+      }
+}
+
+.countdown-wrapper{
+    width:calc(100% - 150px);
+    overflow-x: hidden;
+}
+
+.countdown{
+    display: flex;
+    margin-bottom: 2em;
+    
+}
+.countdown span{
+    text-align: center;
+    font-size: 41px;
+    display: inline-block;
+    width: 25%;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.countdown.secondsdown span{
+    animation:text-color-pulse 1s ease infinite;
+}
+
+.countdown span small{
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+}
+
+.countdown.live{
+    color: red;
+    background: white;
+    position: relative;
+    animation: bounce 2s ease 2s infinite
+}
+.countdown.live:before{
+    content: "Live";
+    display: inline-block;
+    position: absolute;
+    background: red;
+    color: white;
+    text-align: center;
+    padding:0 50.57px;
+    top: 100%;
+    font-size: 16px;
+    animation: fadeInLeft 1s ease-in-out,text-color-pulse 1s ease infinite;
+}
+@keyframes text-color-pulse{
+    from{
+        color:white;
+    }
+    50%{
+        color: red
+    }
+    to{
+        color:white;
+    }
+}
+.countdown.live:after{
+    content: "Happening Now !!!";
+    display: inline-block;
+    position: absolute;
+    width: calc(100% - 130px); 
+    background:wheat;
+    text-align: center;
+    padding:0 50px;
+    top: 100%;
+    margin-left: 130px;
+    animation: fadeInLeftBig 1s ease-in-out;
+    z-index: -1;
+}
+.calender-schedule .event-button{
+    width: 150px;
+    text-align: center;
+}
+/**HOME>>>NEXT CALENDER/countdown SECTION END*****/

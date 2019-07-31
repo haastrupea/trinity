@@ -1,0 +1,305 @@
+
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE********START*********/
+.church-nav.scrolled .nav-item.home a.nav-link{
+    color: #ff5656 !important;
+    border-bottom: 1px solid  #ff5656;
+  }
+  .church-nav .nav-item.home a.nav-link{
+    color: white !important;
+    border-bottom: 1px solid  white;
+  }
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME PAGE**********END*******/
+
+
+/***************SHARED SELECTORS ON HOME  PAGE********START******************/
+
+/**shared by about and sermon hilight section**/
+section .section-title{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4d4d4d4f;
+    letter-spacing: 2px;
+    font-weight: bold;
+ }
+
+/***************SHARED SELECTORS ON HOME  PAGE*********END******************/
+
+
+/**HOME>>>CAROUSEL SECTION***START**/
+.welcome-slide{
+    background: url("../images/slide_bg/welcome_bg_xl.jpg")no-repeat;
+    background-size:cover;
+    background-position:left bottom;
+}
+.welcome-slide-overlay{
+    background: url("../images/slide_bg/welcome_overlay_bg_xl.png") no-repeat;
+    background-position: bottom left;
+}
+.slide-item.active .animate{
+animation-play-state: running;
+}
+.welcome-msg p.para-1::first-letter{
+font-size: 50px !important;
+float: left;
+padding-right: 5px;
+line-height: 50px;
+
+}
+.welcome-msg h1 small{
+font-size: 20px !important;
+}
+.salvation-slide{
+    background: url("../images/slide_bg/salvation_bg_xl.jpg") no-repeat;
+    background-size:cover;
+    background-position:left bottom;
+}
+/* .salvation-slide{
+    background: url("../images/bg_1.jpg") no-repeat center;
+    background-size:cover;
+} */
+
+.slide-content{
+    /* align-items: center;
+    justify-content: center;
+    color:#fff;
+    margin-left: 0;
+    margin-right: 0; */
+
+}
+.slide-content [class*="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+.texto  .btn{
+    border-color: rgba(255, 255, 255, 1);
+    background: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    transform: skewX(-10deg);
+    border-top-width: 10px;
+    border-right-width: 1.25px;
+    border-bottom-width: 2.5px;
+    border-left-width: 5px;
+}
+.texto  .btn:hover{
+        background: white;
+        color: red;
+       
+}
+.texto h1{
+    font-size: 4em;
+}
+
+@media (max-width: 991.98px){
+.texto h1 {
+    font-size: 2.58em;
+}
+}
+
+/**HOME>>>CAROUSEL SECTION***************END*****/
+
+/**HOME>>>NEWSLETTER SECTION***START***********/
+.newsletter-wrapper{
+    padding: 12em 0;
+    background-image: linear-gradient(45deg,rgba(0, 128, 0, 0.664) 0%,rgba(128, 0, 128, 0.9) 100%);
+    color: white;
+}
+
+.event1 .btn-primary {
+    background: #ff5656;
+    color: #fff;
+    border-color: rgba(104, 237, 255, 0.8);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    border-width: 2px;
+}
+.form-group input{
+    padding-right: 50px;
+    border: 1px solid rgba(2, 0, 0, 0.7);
+    color:black;
+    border-radius: 30px;
+}
+.subscribe{
+    float:right;
+    margin-right:8px;
+    margin-top:-28px;
+    position: relative;
+    z-index:2;
+    color:red;
+    opacity:0.8;
+}
+
+
+/**HOME>>>NEWSLETTER SECTION********END*****/
+
+/**HOME>>>MISSION AND VISIONSECTION*****/
+
+.mission>h1,.vision>h1{
+    position: absolute;
+    width: 100%;
+}
+.vision,.mission{
+    padding: 10% 7%;
+}
+
+/* temporary style:as placeholder*/
+.mission{
+   background:  rgb(173, 209, 230);
+}
+/* ^^^^^^temporary style:as placeholder^^^^^^*/
+
+#vision-mission .container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    }
+    
+.video-presentation{
+    background: #fff;
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 50%;
+    margin-right: -50px;
+    border: 3px solid #ff5656;
+    animation: emitter 1.5s ease infinite;
+    cursor: pointer;
+    z-index: 5;
+    transition: background-color,border .5s ease;
+    transform: translate(0,-45%)
+}
+@media(max-width:767.98px){
+.video-presentation{
+    top:auto !important;
+    bottom:0;
+    right: auto !important;
+    left: 50%;
+    margin-right:auto !important;
+    transform: translateX(-50%) !important;
+    margin-bottom: -50px;
+    }
+}
+
+.video-presentation:hover{
+    background-color: #ff5656c4;
+    border-color:#fff;
+    animation: emitter .5s ease infinite; 
+}
+.video-presentation:hover span{
+    color: #fff;
+}
+.video-presentation span{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    color: #ff5656;
+    transform: translate(50%,-50%);
+    transition: color .4s ease;
+}
+/**HOME>>>MISSION AND VISION SECTION END ****/
+
+/**HOME>>>ABOUT SECTION ****/
+.icon-about{
+    background: #272e4f1a;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 30px 0;
+    color: #2c6d40;
+}
+.about-wrapper .short-desc{
+    margin-top: 20px;
+    padding: 5px;
+}
+.about-wrapper h4.title{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+
+}
+/**HOME>>>ABOUT SECTION ********END*******/
+
+/**HOME>>>SERMON SECTION ********START*******/
+.sermons .img{
+    background-image:url("../images/sermons-1.jpg"); 
+    height:200px;
+    background-position:center center;
+    background-size:cover;
+    text-decoration-line: none;
+}
+
+.sermons .icon{
+    color: white;
+    background-color: #FF5656;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.sermons .icon:hover{
+    animation: pulse .6s ease-in  infinite forwards ;
+}
+
+.sermons .text h3 a{
+    color:#000000;
+    font: bold 24px times;
+}
+.sermons .text span.position {
+    font-weight: 400;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+    display: block;
+}
+
+
+/******HOME>>>SERMON SECTION ********END************************/
+/******HOME>>>EVENT SECTION ********START************************/
+.event-h-left{
+    background-image: linear-gradient(46deg,teal 0%, purple 100%);
+    color: white;
+    padding: 50px 0;
+}
+.eventa1 span{
+    display: block;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.eventa1 span:last-child{
+    text-transform: uppercase;
+}
+.eventa1 span:first-child{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    text-align: right;
+}
+.event-wrapper{
+    padding: 5%;
+    background: aliceblue;
+
+}
+@media (min-width: 768px){
+.event-wrapper {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    padding-right: 15%;
+}
+}
+
+.event-container{
+    margin-bottom: 4em;
+}
+/******HOME>>>EVENT SECTION ********END************************/

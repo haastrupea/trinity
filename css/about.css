@@ -1,0 +1,46 @@
+
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR ABOUT PAGE********START*********/
+.church-nav.scrolled .nav-item.about a.nav-link{
+    color: #ff5656 !important;
+    border-bottom: 1px solid  #ff5656;
+  }
+.church-nav .nav-item.about a.nav-link{
+    color: white !important;
+    border-bottom: 1px solid  #fff;
+  }
+
+/***************CONTROL NAV ACTIVE BEHAVOIUR FOR HOME ABOUT**********END*******/
+.container-fluid{
+  padding: 0;
+  margin: 0;    
+  overflow: hidden;
+}
+/*--------------------------------------about SECTION-------------------------------------*/
+.about-hero .overlay-img{
+  background:url(/images/slide_bg/welcome_overlay_bg_xl.png) no-repeat; 
+  background-position: bottom left;
+}
+
+.about-hero{
+  background:url("../images/hero/about.jpg") no-repeat;
+  background-position: bottom left;
+  background-size:cover;
+  width:100%;
+  padding: 13em 0;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+}
+.bible-quote{
+  font-size: 20px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  position: absolute;
+  font-style: italic;
+}
+
+
+
+
+
+/*--------------------------------------END OF about SECTION-------------------------------------*/
