@@ -18,13 +18,22 @@ $image_dir ='assets/uploads/images/';
     $church_history=$qry_his->fetch(PDO::FETCH_ASSOC);
 
     $sql_pst="SELECT * FROM church_pastor";
- $qry_pst=$db->query($sql_pst);
- $church_pst=$qry_pst->fetch(PDO::FETCH_ASSOC);
+    $qry_pst=$db->query($sql_pst);
+    $church_pst=$qry_pst->fetch(PDO::FETCH_ASSOC);
 
     $sql_picture="SELECT * FROM picture_gallery LIMIT 1 OFFSET 0";
     $qry_picture=$db->query($sql_picture);
     $picture=$qry_picture->fetch(PDO::FETCH_ASSOC);
-	
+    
+    
+    $logo=$image_dir.$picture['logo'];
+    $ch_name=$church_info['ch_name'];
+    $pst_pic=
+    $Pst_name
+    $Pst_title
+    $welcome_addr
+
+
  }
 ?>
 <!DOCTYPE html>
