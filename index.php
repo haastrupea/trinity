@@ -21,7 +21,7 @@ $image_dir ='assets/uploads/images/';
  $qry_pst=$db->query($sql_pst);
  $church_pst=$qry_pst->fetch(PDO::FETCH_ASSOC);
 
- $sql_picture="SELECT * FROM picture_gallery LIMIT 1 OFFSET 0";
+    $sql_picture="SELECT * FROM picture_gallery LIMIT 1 OFFSET 0";
     $qry_picture=$db->query($sql_picture);
     $picture=$qry_picture->fetch(PDO::FETCH_ASSOC);
 	
