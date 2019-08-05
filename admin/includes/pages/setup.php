@@ -180,19 +180,19 @@ if(!isset($error)){
 
                                 <div class="form-row align-items-center">
                                     <div class="form-group col-md-3">
-                                        Social media</div>
+                                        Social media page link:</div>
                                     <div class="form-group col-md-3 ">
-                                        <input type="text" class="form-control input  text-center" autocomplete="off"
-                                            placeholder="Facebook" name="church_fb_page"
+                                        <input type="url" class="form-control input  text-center" autocomplete="off"
+                                            placeholder="Facebook link" name="church_fb_page"
                                             value="<?php echo isset($church_info['ch_fb_pg'])? $church_info['ch_fb_pg']:"" ?>">
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <input type="text" class="form-control input  text-center" autocomplete="off"
+                                        <input type="url" class="form-control input  text-center" autocomplete="off"
                                             placeholder="Twitter" name="church_tw_handle"
                                             value="<?php echo isset($church_info['ch_twitter'])? $church_info['ch_twitter']:"" ?>">
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <input type="text" class="form-control input " autocomplete="off"
+                                        <input type="url" class="form-control input " autocomplete="off"
                                             placeholder="Instagram" name="church_ig_handle"
                                             value="<?php echo isset($church_info['ch_instagram'])? $church_info['ch_instagram']:"" ?>">
                                     </div>
