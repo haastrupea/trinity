@@ -11,7 +11,7 @@
                        <!-- <span>God</span> -->
                        <span>
                         <?php echo isset($church_name)? $church_name:"Church" ?></span></a></h5>
-                    <p class="animate">pastors welcome address</p>
+                    <p class="animate"></p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -30,18 +30,29 @@
                 <div class="mb-4 animate">
                     <h2 >Contact Information</h2>
                     <ul class="list-unstyled contact-detail">
-               <li><span class="fa fa-map-marked"></span><span class="text"> 24, Adeniji street Lagos</span>
+               <li><span class="fa fa-map-marked"></span><span class="text"> <?php echo $ch_addr; ?></span>
                                 </li>
-                            <li><a href="#"><span class="fas fa-phone"></span><span class="text"> +234 902 3929 210</span></a></li>
-                            <li><a href="#"><span class="fas fa-envelope"></span><span class="text"> info@Godschurch.com</span></a></li>
+                                <?php if($ch_phn1): ?>
+                            <li><a href="#"><span class="fas fa-phone"></span><span class="text"><?php echo $ch_phn1; ?></span></a></li>
+                            <?php endif ?>
+                                <?php if($ch_phn2): ?>
+                            <li><a href="#"><span class="fas fa-phone"></span><span class="text"><?php echo $ch_phn2; ?></span></a></li>
+                            <?php endif ?>
+                                <?php if($ch_phn3): ?>
+                            <li><a href="#"><span class="fas fa-phone"></span><span class="text"><?php echo $ch_phn3; ?></span></a></li>
+                            <?php endif ?>
+                                <?php if($ch_phn4): ?>
+                            <li><a href="#"><span class="fas fa-phone"></span><span class="text"><?php echo $ch_phn4; ?></span></a></li>
+                            <?php endif ?>
+                            <li><a href="#"><span class="fas fa-envelope"></span><span class="text"> <?php echo $ch_mail ?></span></a></li>
                             <li><span class="fas fa-clock"></span><span class="text"> Saturday — Sunday 8:00am -
                                     5:00pm</span></li>
                         </ul>
                     <ul class="social-media list-unstyled d-flex animate ">
-                        <li class=""><a href="#"><span class="fab fa-twitter fa-2x"></span></a></li>
-                        <li class=""><a href="#"><span class="fab fa-facebook fa-2x"></span></a></li>
-                        <li class=""><a href=" #"><span class="fab fa-instagram fa-2x"></span></a></li>
-                        <li class=""><a href=" #"><span class="fab fa-youtube fa-2x"></span></a></li>
+                        <li class=""><a href="<?php echo $ch_tw?>" target='_blank'><span class="fab fa-twitter fa-2x"></span></a></li>
+                        <li class=""><a href="<?php echo $ch_fb ?>" target='_blank'><span class="fab fa-facebook fa-2x"></span></a></li>
+                        <li class=""><a href=" <?php echo  $ch_ig?>" target='_blank'><span class="fab fa-instagram fa-2x"></span></a></li>
+                        <li class=""><a href="<?php echo  $ch_ytube ?>" target='_blank'><span class="fab fa-youtube fa-2x"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +60,7 @@
         <div class="row">
             <div class="col-md-12 text-center animate">
                 <p class="text-white">Copyright &copy;
-                    <?php echo date("Y") ?> All rights reserved | Gods Church <i class="icon-heart" aria-hidden="true"></i>
+                    <?php echo date("Y") ?> All rights reserved | <?php echo $ch_name ?> <i class="icon-heart" aria-hidden="true"></i>
                     by <a href="#" target="_blank">wikytek</a> </p>
             </div>
         </div>
