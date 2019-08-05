@@ -1,3 +1,6 @@
+<?php
+include_once 'includes/ch_info.php';
+?>
 <!DOCTYPE html>
 <html>
 
