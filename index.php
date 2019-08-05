@@ -15,7 +15,7 @@ $image_dir ='assets/uploads/images/';
     }
     $sql_his.=" LIMIT 1 OFFSET 0";
     $qry_his=$db->query($sql_his);
-    $church_history=$qry_his->fetch(PDO::FETCH_ASSOC);
+    $ch_his=$qry_his->fetch(PDO::FETCH_ASSOC);
 
     $sql_pst="SELECT * FROM church_pastor";
     $qry_pst=$db->query($sql_pst);
@@ -24,15 +24,49 @@ $image_dir ='assets/uploads/images/';
     $sql_picture="SELECT * FROM picture_gallery LIMIT 1 OFFSET 0";
     $qry_picture=$db->query($sql_picture);
     $picture=$qry_picture->fetch(PDO::FETCH_ASSOC);
-    
-    
+
+    //church info
     $logo=$image_dir.$picture['logo'];
     $ch_name=$church_info['ch_name'];
-    $pst_pic=
-    $Pst_name
-    $Pst_title
-    $welcome_addr
+    //church contact
+    $ch_addr=$church_info['ch_address'];
+    $ch_mail=$church_info['ch_email'];
+    $ch_phn1=$church_info['ch_phone_1'];
+    $ch_phn2=$church_info['ch_phone_2'];
+    $ch_phn3=$church_info['ch_phone_3'];
+    $ch_phn4=$church_info['ch_phone_4'];
+    $ch_post_office=$church_info['ch_post_office'];
+    $ch_pob=$church_info['ch_box_number'];
+    $ch_fx=$church_info['ch_fax'];
+    $ch_fb=$church_info['ch_fb_pg'];
+    $ch_tw=$church_info['ch_twitter'];
+    $ch_ig=$church_info['ch_instagram'];
+    $ch_ytube=$ch_his['video_doc'];
+    //church biography
+    $ch_mission=$ch_his['mission'];
+    $ch_vision=$ch_his['vision'];
+    $ch_history=$ch_his['church_History'];
+    $ch_date=$ch_his['founding_date'];
+    //pastor info
+    $pst_pic=$image_dir.$church_pst['picture'];
+    $Pst_lname=$church_pst['lastname'];
+    $Pst_mname=$church_pst['middlename'];
+    $Pst_fname=$church_pst['firstname'];
+    $Pst_title=$church_pst['title'];
+    $Pst_fb=$church_pst['fb_page'];
+    $Pst_twitter=$church_pst['twitter_page'];
+    $Pst_twitter=$church_pst['twitter_page'];
+    $Pst_abt=$church_pst['about'];
+    $pst_post= $church_pst['is_founder']? 'Founder': 
+    $welcome_addr=$church_pst['welcome_address'];
+    $pst_abbr_fullname=strtoupper(substr($Pst_fname,0,1)).".".strtoupper(substr($Pst_mname,0,1))." ".strtoupper(substr($Pst_lname,0,1)).substr($Pst_lname,1);
 
+    $pst_abbr_title_fullname= strtoupper(substr($Pst_title,0,1)).substr($Pst_title,1)." ".strtoupper(substr($Pst_fname,0,1)).".".strtoupper(substr($Pst_mname,0,1))." ".strtoupper(substr($Pst_lname,0,1)).substr($Pst_lname,1);
+
+    $pst_fullname=strtoupper(substr($Pst_fname,0,1)).substr($Pst_fname,1)." ".strtoupper(substr($Pst_mname,0,1)).substr($Pst_mname,1)." ".strtoupper(substr($Pst_lname,0,1)).substr($Pst_lname,1);
+
+    $pst_title_fullname=strtoupper(substr($Pst_title,0,1)).substr($Pst_title,1)." ".strtoupper(substr($Pst_fname,0,1)).substr($Pst_fname,1)." ".strtoupper(substr($Pst_mname,0,1)).substr($Pst_mname,1)." ".strtoupper(substr($Pst_lname,0,1)).substr($Pst_lname,1);
+    
 
  }
 ?>
@@ -42,7 +76,7 @@ $image_dir ='assets/uploads/images/';
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Church-home</title>
+    <title>Church-home <?php echo $ch_name; ?></title>
 <?php include_once("includes/css.import.php"); ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/carousel.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/home.css">
@@ -84,7 +118,7 @@ $image_dir ='assets/uploads/images/';
     <div class="col-md-2 bg-dar pt-md-5 d-flex justify-content-center">
     <div class="pastor text-center mt-md-5 pt-5 text-white">
         <img class="img-thumbnail" src="images/person_1.jpg" width="150">
-        <p class="mb-0">Rev. James Daniel</p>
+        <p class="mb-0"><?php echo $pst_abbr_title_fullname ?></p>
         <h5>General Overseer</h5>
     </div>
     </div>
