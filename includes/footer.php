@@ -61,7 +61,7 @@
             <div class="col-md-12 text-center animate">
                 <p class="text-white">Copyright &copy;
                     <?php echo date("Y") ?> All rights reserved | <?php echo $ch_name ?> <i class="icon-heart" aria-hidden="true"></i>
-                    by <a href="#" target="_blank">wikytek</a> </p>
+                     Developed by <a href="https://haastrupea.github.io" target="_blank">wikytek</a> </p>
             </div>
         </div>
     </div>
