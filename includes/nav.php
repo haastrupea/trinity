@@ -11,7 +11,7 @@
                                         width="50" height="50">
 								<?php endif; ?>
 					
-        <span class="d-inline-block brand-text animate" data-effect="border-wide"><span class="d-block animate" data-effect="fadeInLeft">God's</span><span class="d-block animate" data-effect="fadeInLeft"> Church</span></span></a>
+        <span class="d-inline-block brand-text animate" data-effect="border-wide"><span class="d-block animate" data-effect="fadeInLeft"><?php echo $ch_abbr?></span><span class="d-block animate" data-effect="fadeInLeft"><?php echo $ch_name?></span></span></a>
 	      <button class="navbar-toggler"  type="button" data-toggle="collapse" aria-controls="church-nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="fas fa-bars"></span> Menu
 					
