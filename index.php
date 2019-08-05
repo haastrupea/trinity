@@ -6,7 +6,7 @@ include_once 'includes/ch_info.php';
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00">
     <title>Church-home <?php echo $ch_name; ?></title>
 <?php include_once("includes/css.import.php"); ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/carousel.css">
@@ -44,16 +44,16 @@ include_once 'includes/ch_info.php';
     </div>
     <!-- any other slide content can go in here -->
     <div class="parallax fullHight welcome-slide">
-    <div class="container fullHight">
-    <div class="row fullHight slide-content pt-md-5">
-    <div class="col-md-2 bg-dar pt-md-5 d-flex justify-content-center">
-    <div class="pastor text-center mt-md-5 pt-5 text-white">
-        <img class="img-thumbnail" src="images/person_1.jpg" width="150">
+    <div class="container-fluid ">
+    <div class="row slide-content pt-md-5 mt-md-4">
+    <div class="col-md-2 col-sm-5 col-12 bg-dar pt-md-5 d-flex justify-content-center pt-3">
+    <div class="pastor text-center mt-md-5 pt-md-5 text-white">
+        <img class="img-thumbnail" src="<?php echo $pst_pic ?>" width="150">
         <p class="mb-0"><?php echo $pst_abbr_title_fullname ?></p>
         <h5>General Overseer</h5>
     </div>
     </div>
-    <div class="texto col-md-10 mt-md-5 px-3 text-white welcome-msg">
+    <div class="texto col-md-10 col-sm-7 mt-md-5 px-3 text-white welcome-msg">
         <h1 class="animate" data-effect="fadeInLeft">Welcome <small>from pastor</small></h1>
         <p class="animate para-1"><?php echo $welcome_addr; ?></p>
     </div>
@@ -171,7 +171,7 @@ include_once 'includes/ch_info.php';
                         <!-- <h2 class="head motto animate">  
                         </h2> -->
                         <p class="intro animate">
-                           As a church we offer the following ministeries that God has been using to help people enjoy the fullness of God.
+                           Apart from our weekly sunday church services, we as a church also strive continuously to meet the following needs of our members.
                         </p>
                     </div>
                     </div>
@@ -212,7 +212,7 @@ include_once 'includes/ch_info.php';
                        </div> 
                        <div class="short-desc">
                                     <h4 class="title">
-                                    Help ministry
+                                    Care ministry
                                     </h4>
                      <!-- <p class="short-text animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis soluta facere asperiores. Nihil alias iure atque similique fuga odio, ab nisi eligendi?
                                     </p> -->
@@ -226,7 +226,7 @@ include_once 'includes/ch_info.php';
                        </div> 
                        <div class="short-desc">
                                     <h4 class="title">
-                                            The word
+                                            The Scriptural teachings
                                     </h4>
                                     <!-- <p class="short-text animate">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis soluta facere asperiores. Nihil alias iure atque similique fuga odio, ab nisi eligendi?
@@ -247,11 +247,11 @@ include_once 'includes/ch_info.php';
                                     Sermons
                                 </span>
                                 <h2 class="head animate">
-                                    Lorem ipsum dolor sit amet.
+                                    --LATEST SERMONS--
                                 </h2>
                                 <p class="intro animate">
                                     <!-- bible pessage talking about the word of God -->
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minus ad, ex, tempora facilis illum tempore
+                                    <span class="fa fa-quote-left"></span> Thy word is a lamp unto my feet, and a light unto my path. <span class="fa fa-quote-right"></span><span>-Psalm 119:105(KJV)</span>
                                 </p>
                             </div>
                             </div>

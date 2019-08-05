@@ -28,6 +28,15 @@ $image_dir ='assets/uploads/images/';
     //church info
     $logo=$image_dir.$picture['logo'];
     $ch_name=$church_info['ch_name'];
+    $church_name_abbr=explode(" ",$ch_name);
+    $ch_abbr="";
+    $except=['the',"of"];
+    foreach ($church_name_abbr as $key => $value) {
+        if( !in_array(strtolower($value),$except))
+        $ch_abbr.=substr($value,0,1)." ";
+    }
+
+    $ch_abbr=strtoupper(trim($ch_abbr));
     //church contact
     $ch_addr=$church_info['ch_address'];
     $ch_mail=$church_info['ch_email'];

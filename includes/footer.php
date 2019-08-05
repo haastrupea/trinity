@@ -44,9 +44,8 @@
                                 <?php if($ch_phn4): ?>
                             <li><a href="#"><span class="fas fa-phone"></span><span class="text"><?php echo $ch_phn4; ?></span></a></li>
                             <?php endif ?>
-                            <li><a href="#"><span class="fas fa-envelope"></span><span class="text"> <?php echo $ch_mail ?></span></a></li>
-                            <li><span class="fas fa-clock"></span><span class="text"> Saturday — Sunday 8:00am -
-                                    5:00pm</span></li>
+                            <li><a href="#"><span class="fa fa-mail-bulk"></span><span class="text"> <?php echo $ch_mail ?></span></a></li>
+                            <li><span class="fas fa-clock"></span><span class="text"> See all our <a href="events.php?event='house fellowship'&tag='upcoming event'" class="btn btn-sm btn-secondary rounded">events here</a></span></li>
                         </ul>
                     <ul class="social-media list-unstyled d-flex animate ">
                         <li class=""><a href="<?php echo $ch_tw?>" target='_blank'><span class="fab fa-twitter fa-2x"></span></a></li>
