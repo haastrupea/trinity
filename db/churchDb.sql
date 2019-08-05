@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 04, 2019 at 11:58 PM
+-- Generation Time: Aug 05, 2019 at 04:24 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -158,7 +158,7 @@ CREATE TABLE `church_history` (
 --
 
 INSERT INTO `church_history` (`church_id`, `founding_date`, `church_History`, `video_doc`, `mission`, `vision`, `vs_ms_youtube_link`) VALUES
-(2, '2001-09-04', 'WOW', 'http://fb.com', 'wow', 'defender', 'http://wow.com');
+(2, '2001-09-04', 'WOW', 'http://youtube.com/channels', 'wow', 'defender', 'http://wow.com');
 
 -- --------------------------------------------------------
 
@@ -188,7 +188,7 @@ CREATE TABLE `church_info` (
 --
 
 INSERT INTO `church_info` (`id`, `ch_name`, `ch_address`, `ch_email`, `ch_phone_1`, `ch_phone_2`, `ch_phone_3`, `ch_phone_4`, `ch_box_number`, `ch_post_office`, `ch_fax`, `ch_fb_pg`, `ch_twitter`, `ch_instagram`) VALUES
-(2, 'The redeemed christian church of God', 'ebute-meta lagos state, Nigeria', 'rccg_info@rccg.org', 1234534678, NULL, NULL, NULL, '123', 'Ile-ife', 23445566, 'wonder', 'greatifeh', 'rccg');
+(2, 'The redeemed christian church of God', 'ebute-meta lagos state, Nigeria', 'rccg_info@rccg.org', 1234534678, NULL, NULL, NULL, '123', 'Ile-ife', 23445566, 'https://facebook.com/hello', 'http://twitter.com/hello', 'http://instagram.com/hello');
 
 -- --------------------------------------------------------
 
@@ -209,15 +209,16 @@ CREATE TABLE `church_pastor` (
   `fb_page` varchar(150) DEFAULT NULL,
   `ig_page` varchar(150) DEFAULT NULL,
   `twitter_page` varchar(150) DEFAULT NULL,
-  `is_founder` tinyint(1) NOT NULL DEFAULT '0'
+  `is_founder` tinyint(1) NOT NULL DEFAULT '0',
+  `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `church_pastor`
 --
 
-INSERT INTO `church_pastor` (`id`, `title`, `firstname`, `middlename`, `lastname`, `picture`, `about`, `gender`, `welcome_address`, `fb_page`, `ig_page`, `twitter_page`, `is_founder`) VALUES
-(5, 'Mr.', 'Oyewole', 'Adejare', 'wole', 'Mr._O.A_wole.jpeg', 'wow', 'male', 'Welcome to our church where we love, care and preach the word of God that is able to make you skillful in your spiritual Journey', 'ok', 'ok', 'ok', 0);
+INSERT INTO `church_pastor` (`id`, `title`, `firstname`, `middlename`, `lastname`, `picture`, `about`, `gender`, `welcome_address`, `fb_page`, `ig_page`, `twitter_page`, `is_founder`, `post`) VALUES
+(5, 'rev', 'Oyewole', 'Adejare', 'wole', 'Mr._O.A_wole.jpeg', 'wow', 'male', 'Welcome to our church where we love, care and preach the word of God that is able to make you skillful in your spiritual Journey', 'ok', 'ok', 'ok', 0, '0');
 
 -- --------------------------------------------------------
 
