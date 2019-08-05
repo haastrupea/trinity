@@ -38,6 +38,7 @@ $image_dir ='assets/uploads/images/';
     $ch_post_office=$church_info['ch_post_office'];
     $ch_pob=$church_info['ch_box_number'];
     $ch_fx=$church_info['ch_fax'];
+    //church soscial media
     $ch_fb=$church_info['ch_fb_pg'];
     $ch_tw=$church_info['ch_twitter'];
     $ch_ig=$church_info['ch_instagram'];
@@ -123,14 +124,9 @@ $image_dir ='assets/uploads/images/';
     </div>
     </div>
     <div class="texto col-md-10 mt-md-5 px-3 text-white welcome-msg">
-        <h1 class="animate" data-effect="fadeInLeft">Welcome <small>From pastor</small></h1>
-        <p class="animate para-1">Shalom ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum harum nesciunt quia, reprehenderit minima est quam quibusdam </p>
-        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum harum nesciunt quia, reprehenderit minima est quam quibusdam </p>
-        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum harum nesciunt quia, reprehenderit minima est quam quibusdam </p>
-        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum harum nesciunt quia, reprehenderit minima est quam quibusdam </p>
+        <h1 class="animate" data-effect="fadeInLeft">Welcome <small>from pastor</small></h1>
+        <p class="animate para-1"><?php echo $welcome_addr; ?></p>
     </div>
-
-
 
 </div>
 </div>
@@ -203,7 +199,7 @@ $image_dir ='assets/uploads/images/';
                         <div class="slide-ite">
                             <div class="mision-container p-5">
                      <p class="mission-text p-5 text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum harum nesciunt quia, reprehenderit minima est quam quibusdam 
+                     <?php echo $ch_mission ?>
                         </p>
                             </div>
                             </div>
@@ -222,7 +218,7 @@ $image_dir ='assets/uploads/images/';
                        <div class="vision-container p-5">
                             
            <p class="vision-statement p-5 text-center animate">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, quibusdam fugiat? Ipsam velit facere, modi sunt magnam distinctio iste recusandae.
+           <?php echo $ch_vision ?>
            </p>
                        </div>
                   </div>
@@ -441,7 +437,7 @@ $image_dir ='assets/uploads/images/';
                         <div class="row d-flex justify-content-center">
                           <div class="col-md-7 text-center animate">
                             <h3>Subcribe to our Newsletter</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor delectus accusamus ipsum suscipit, esse ducimus quasi vero fugit. Illum quibusdam sit magnam quas itaque sequi odit amet, modi alias minima!</p>
+                            <p>We would love to have you on our mailing list, sign up below if you are interested</p>
                             <div class="row d-flex justify-content-center mt-5">
                               <div class="col-md-6">
                                 <form action="#" method="post" class="subscribe-form">
