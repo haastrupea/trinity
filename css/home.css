@@ -228,8 +228,7 @@ font-size: 20px !important;
 /**HOME>>>ABOUT SECTION ********END*******/
 
 /**HOME>>>SERMON SECTION ********START*******/
-.sermons .img{
-    background-image:url("../images/sermons-1.jpg"); 
+.sermons .img{ 
     height:200px;
     background-position:center center;
     background-size:cover;

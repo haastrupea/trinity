@@ -256,51 +256,10 @@ include_once 'includes/ch_info.php';
                             </div>
                             </div>
                             <div class="row">
-                                    <div class="col-md-4 animate">
-                                            <div class="sermons">
-                                            <a href="#" class="img  mb-3 d-flex justify-content-center align-items-center" >
-                                                    <div class="icon d-flex justify-content-center align-items-center">
-                                                        <span class="fas fa-play"></span>
-                                                    </div>
-                                                </a>
-                                                <div class="text">
-                                                    <h3><a href="#">Be at Peace With One Another</a></h3>
-                                                    <span class="position">Pastor. Ipsum Lorem</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 animate">
-                                            <div class="sermons">
-                                                <a href="#" class="img popup-vimeo mb-3 d-flex justify-content-center align-items-center" >
-                                                    <div class="icon d-flex justify-content-center align-items-center">
-                                                        <span class="fas fa-play"></span>
-                                                    </div>
-                                                </a>
-                                                <div class="text">
-                                                    <h3><a href="#">Inspirational Message of God</a></h3>
-                                                    <span class="position">Pastor. Lorem Ipsum</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 animate">
-                                            <div class="sermons">
-                                                <a href="https://vimeo.com/45830194" class="img popup-vimeo mb-3 d-flex justify-content-center align-items-center" style="background-image: url(images/sermons-3.jpg);">
-                                                    <div class="icon d-flex justify-content-center align-items-center">
-                                                        <span class="fas fa-play"></span>
-                                                    </div>
-                                                </a>
-                                                <div class="text">
-                                                    <h3><a href="#">Prayers, Presence, and Provision</a></h3>
-                                                    <span class="position">Dave Zuleger</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <?php include_once 'includes/sermon_preview.php' ?>
                         </div>
-                        <div class="row my-5 justify-content-center">
-                            <div class="col-md-3 animate">
-                                 <a href="sermons.php" class="btn btn-primary rounded">All Sermons</a>            
-                            </div>
-                        </div>
+
+                       
         
                     </div>
                 </div>
@@ -316,7 +275,7 @@ include_once 'includes/ch_info.php';
                        </p>
                        <h3 class="text-right">Psalm 122:1(NLT)</h3>
                        <div class="link-wrapper text-md-left">
-                            <a href="#" class="btn btn-primary circle">View Events</a>
+                            <a href="events.php" class="btn btn-primary circle">View Events</a>
                        </div>
                    </div>
                </div>
