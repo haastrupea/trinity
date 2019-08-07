@@ -35,16 +35,21 @@ if(!$db){
         LIMIT 2 OFFSET 0';
         
         
-        
-        
-        // SELECT Ev_events.is_recurring, Ev_repeat_pattern.occurencies,Ev_events.end_date, IF(Ev_events.is_recurring=0,Ev_events.start_date,IF(Ev_repeat_pattern.occurencies,"it has occurences",IF(Ev_events.end_date,"it is until",'it is forever'))) as startdate
-        // FROM `Ev_events` 
-        // LEFT JOIN Ev_repeat_pattern 
-        // ON Ev_repeat_pattern.event_id=Ev_events.id
-        // LEFT JOIN Ev_repeat_type
-        // ON Ev_repeat_type.id=Ev_repeat_pattern.repeat_type
-        // WHERE 
-        // NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC
+//         SELECT Ev_events.is_recurring, Ev_repeat_pattern.occurencies,Ev_events.end_date,
+// IF(Ev_events.is_recurring=0,
+//    Ev_events.start_date,
+//    IF(Ev_repeat_pattern.occurencies,"occur",
+//       IF(Ev_events.end_date,"it is until",'it is forever'))) as startdate,
+//       DATE_ADD(Ev_events.start_date, INTERVAL Ev_repeat_pattern.interval_sep MONTH) as result
+//         FROM `Ev_events` 
+//         LEFT JOIN Ev_repeat_pattern 
+//         ON Ev_repeat_pattern.event_id=Ev_events.id
+//         LEFT JOIN Ev_repeat_type
+//         ON Ev_repeat_type.id=Ev_repeat_pattern.repeat_type
+//         WHERE 
+//         NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC
+     
+
 
 $qry=$db->query($sql2);
 $results=$qry->fetchAll(PDO::FETCH_ASSOC);
