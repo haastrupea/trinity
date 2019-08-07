@@ -23,13 +23,28 @@ if(!$db){
         //repeat:untilldate+time <now()
         //repeat:occurdate+time <now()
 
-        $sql2='SELECT id,event_name,start_time,end_time,venue,flyer_file_name,end_date,start_date,
-        IF(Ev_events.is_recurring=0,Ev_events.start_date,CURRENT_TIMESTAMP()) as startdate
-         FROM `Ev_events` 
+        $sql2='SELECT Ev_events.id,event_name,start_time,end_time,venue,flyer_file_name,end_date,start_date,
+        IF(Ev_events.is_recurring=0,Ev_events.start_date,IF(Ev_repeat_pattern.repeat_type=Ev_repeat_type.id,"hi","it is not daily event")) as startdate
+        FROM `Ev_events` 
         LEFT JOIN Ev_repeat_pattern 
-        ON Ev_repeat_pattern.event_id=Ev_events.id 
+        ON Ev_repeat_pattern.event_id=Ev_events.id
+        LEFT JOIN Ev_repeat_type
+        ON Ev_repeat_type.id=Ev_repeat_pattern.repeat_type
         WHERE 
-        NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC LIMIT 2 OFFSET 0';
+        NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC
+        LIMIT 2 OFFSET 0';
+        
+        
+        
+        
+        // SELECT IF(Ev_events.is_recurring=0,Ev_events.start_date,IF(Ev_repeat_pattern.occurencies,"it has occurences",IF(Ev_events.end_date,"it is until",'it is forever'))) as startdate
+        // FROM `Ev_events` 
+        // LEFT JOIN Ev_repeat_pattern 
+        // ON Ev_repeat_pattern.event_id=Ev_events.id
+        // LEFT JOIN Ev_repeat_type
+        // ON Ev_repeat_type.id=Ev_repeat_pattern.repeat_type
+        // WHERE 
+        // NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC
 
 $qry=$db->query($sql2);
 $results=$qry->fetchAll(PDO::FETCH_ASSOC);
