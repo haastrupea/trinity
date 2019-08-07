@@ -264,6 +264,7 @@ include_once 'includes/ch_info.php';
                     </div>
                 </div>
     </section>
+
     <section>
        <div class="container-fliud">
            <div class="row no-spacing">
@@ -281,7 +282,12 @@ include_once 'includes/ch_info.php';
                </div>
                <div class="col-md-6">
                    <div class="event-wrapper">
+
+
+
+
                         <div class="event-container d-flex animate">
+
                                 <div class="eventa1 mr-4">
                                         <p>
                                             <span>04</span>
@@ -298,6 +304,10 @@ include_once 'includes/ch_info.php';
                                     </div>
                                     
                          </div>
+
+
+
+
                          <div class="eventa0 d-flex animate">
                                 <div class="eventa1 mr-4">
                                         <p>
