@@ -37,7 +37,7 @@ if(!$db){
         
         
         
-        // SELECT IF(Ev_events.is_recurring=0,Ev_events.start_date,IF(Ev_repeat_pattern.occurencies,"it has occurences",IF(Ev_events.end_date,"it is until",'it is forever'))) as startdate
+        // SELECT Ev_events.is_recurring, Ev_repeat_pattern.occurencies,Ev_events.end_date, IF(Ev_events.is_recurring=0,Ev_events.start_date,IF(Ev_repeat_pattern.occurencies,"it has occurences",IF(Ev_events.end_date,"it is until",'it is forever'))) as startdate
         // FROM `Ev_events` 
         // LEFT JOIN Ev_repeat_pattern 
         // ON Ev_repeat_pattern.event_id=Ev_events.id
