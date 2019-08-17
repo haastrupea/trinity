@@ -303,8 +303,8 @@ include_once 'includes/ch_info.php';
 
                                 <div class="eventa1 mr-4">
                                         <p>
-                                            <span><?php echo $startday ?></span>
-                                            <span><?php echo $startMonthYr ?></span>
+                                            <span><?php //echo $startday ?>Every</span>
+                                            <span><?php //echo $startMonthYr ?> Last month</span>
                                         </p>
                                     </div>
                                     <div class="event-details">
