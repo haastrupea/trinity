@@ -221,7 +221,7 @@ let addtodate=(date,day=0,mth=0,yr=0)=>{
                
                 weekdays.classList.add("show")
                 
-            }else if(val==="monthly" || val==="yearly"){
+            }else if(val==="monthly"){
                 hideNreset(weekofmonth)
                 hideNreset(weekdays)
                 //show both week of month and days of week
@@ -229,6 +229,10 @@ let addtodate=(date,day=0,mth=0,yr=0)=>{
                 everyLabel.classList.add("show")
                 weekofmonth.classList.add("show")
                 weekdays.classList.add("show")
+            }else{
+                hideNreset(weekofmonth)
+                hideNreset(weekdays)
+                everyLabel.classList.add("show")
             }
 
             if(val==='monthly'){

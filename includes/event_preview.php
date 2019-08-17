@@ -33,24 +33,20 @@ if(!$db){
         WHERE 
         NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC
         LIMIT 2 OFFSET 0';
-        
+//forever
+//year:Yearly, Every {week of month/""} {day of week or "week"} of the year
+//year: Every {First/""} {wednessday/week} of {August}//if week of month and/or day of week is given
+        //if day of week is given and week of month is not given{use the week of month the startdate falls on}
+//or
+//year: Yearly Every {day that startdate falls on} of {month that startdate falls on}
 
-//         SELECT Ev_events.is_recurring, Ev_repeat_pattern.occurencies,Ev_events.end_date,
-//    CASE
-//     WHEN Ev_repeat_pattern.repeat_type=1 THEN DATE_ADD(Ev_events.start_date, INTERVAL Ev_repeat_pattern.interval_sep MONTH)
-//     WHEN Ev_repeat_pattern.repeat_type=2 THEN "The quantity is greater than 30"
-//     WHEN Ev_repeat_pattern.repeat_type=3 THEN "The quantity is greater than 30"
-//     WHEN Ev_repeat_pattern.repeat_type=4 THEN "The quantity is greater than 30"
-//     ELSE "The quantity is under 30"
-//    END as result
-//         FROM `Ev_events` 
-//         LEFT JOIN Ev_repeat_pattern 
-//         ON Ev_repeat_pattern.event_id=Ev_events.id
-//         LEFT JOIN Ev_repeat_type
-//         ON Ev_repeat_type.id=Ev_repeat_pattern.repeat_type
-//         WHERE 
-//         NOT (TIMESTAMP(Ev_events.end_date)<CURRENT_TIMESTAMP()) or end_date IS NULL ORDER BY `Ev_events`.`end_date` DESC
+//month: Every {week of month or ""} {day of week/"week"} of {Month of year--from startdate} {current year}
+//monthly: Every {First/""} {wednessday} of {August}//if week of month and day of week is given
+        //if week of month is given and day of week is not given{use the day the startdate falls on}
+        //if day of week is given and week of month is not given{use the week of month the startdate falls on}
+//or
+//month: Every {day that startdate falls on} of {month that startdate falls on}{current year}
 
-
+//curdatetotimestamp-(calculatedtimestampfrom event partern table)
 $qry=$db->query($sql2);
 $results=$qry->fetchAll(PDO::FETCH_ASSOC);
