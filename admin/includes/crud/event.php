@@ -170,7 +170,7 @@ if(!empty($_POST['add_event_btn'])){
             $repeatFor=$jd->repeat_for;
     
     
-        //add event name and id to repeat pattern table
+         //add event name and id to repeat pattern table
             array_push($pattern_colname,'repeat_type','interval_sep');
             array_push($pattern_placeholder,':repeat_type',':interval');
             if($repeat_type_id){
@@ -257,57 +257,14 @@ if(!empty($_POST['add_event_btn'])){
            
 
             }
-            if($repeatEvent!=="weekly"){
-                  //week of month if any
-              if(isset($_POST['weekofmonth'])){
+
+                //week of month if any
+            if(isset($_POST['weekofmonth'])){
                 $weekofmonthselected=$_POST['weekofmonth'];
                 sort($weekofmonthselected);
                 array_push($pattern_colname,'week_of_month');
                 array_push($pattern_placeholder,':week_of_month');
                 array_push($pattern_datavalue,implode(',',$weekofmonthselected));
-            }
-
-             //set current week of month base on start date when week of month is not provided
-             if(isset($_POST['weekdays']) && !isset($_POST['weekofmonth'])){
-                 //set week of month base on start date if user specify weekdays 
-                 //and not week of month
-                $startday=date('j',$startdate);
-                array_push($pattern_colname,'week_of_month');
-                array_push($pattern_placeholder,':week_of_month');
-                array_push($pattern_datavalue,monthOfWeek($startday));
-                }
-
-            
-                  //set current week days base on start date when weekdays is not provided
-             if(isset($_POST['weekofmonth'])&& !isset($_POST['weekdays'])){
-                 //set day of week base on start date if user specify week of month 
-                 //and not weekday
-                    $weekday=date('N',$startdate);
-                array_push($pattern_colname,'day_of_week');
-                array_push($pattern_placeholder,':day_of_week');
-                array_push($pattern_datavalue,$weekday);
-                }
-
-
-                 //day of month when week of month and day of month are not set
-             if(!isset($_POST['weekofmonth']) &&  !isset($_POST['weekdays'])){
-                    $startday=date('j',$startdate);
-
-                    array_push($pattern_colname,'day_of_month');
-                    array_push($pattern_placeholder,':day_of_month');
-                    array_push($pattern_datavalue,$startday);
-                    }
-
-
-            }
-
-            if($repeatEvent==='yearly'){
-                    //for year field
-                    //this is gotten from start date
-                    $monthofYear=date('n',$startdate);
-                    array_push($pattern_colname,'month_of_year');
-                    array_push($pattern_placeholder,':month_of_year');
-                    array_push($pattern_datavalue,$monthofYear);
             }
 
             if($repeatFor==="0"){
@@ -387,7 +344,7 @@ if(!empty($_POST['add_event_btn'])){
             //Transaction begin
             $db->beginTransaction();
             $inserted=$insertEvent->execute($data);
-            if($inserted!==true){
+            if(!$inserted){
                 $db->rollBack();
                 array_push($message,"Failed to add Event, Please try again");
             }else{
