@@ -1,0 +1,40 @@
+function called nextdate
+    -calculate nextdate of any given repeat event
+    -take in the start date of event
+    -take in interval value;
+    -use while loop to keep adding interval as long as the next posible event date and time is less down now
+    -return the date greater than today
+    -end the loop
+
+CREATE FUNCTION IF NOT EXIST nextdate(startdatetime,interval)
+        RETURN DATETIME
+   BEGIN
+        DECLARE nxtdate DATETIME
+        select startdatetime into olddate
+        WHILE nxtdate<CURRENT_TIMESTAMP() DO
+        select ADDDATE(nxtdate,interval) INTO nxtdate
+        return nxtdate
+   END
+        
+
+SELECT e.id, e.start_time,CASE ep.repeat_type
+         WHEN 1 THEN TIMESTAMP(DATE_ADD(e.start_date, INTERVAL ep.interval_sep DAY),IFNULL(e.start_time, "00:00:00"))
+         WHEN 2 THEN TIMESTAMP(DATE_ADD(e.start_date, INTERVAL ep.interval_sep WEEK),IFNULL(e.start_time, "00:00:00"))
+         WHEN 3 THEN TIMESTAMP(DATE_ADD(e.start_date, INTERVAL ep.interval_sep MONTH),IFNULL(e.start_time, "00:00:00"))
+         WHEN 4 THEN TIMESTAMP(DATE_ADD(e.start_date, INTERVAL ep.interval_sep YEAR),IFNULL(e.start_time, "00:00:00"))
+         ELSE TIMESTAMP(e.start_date,IFNULL(e.start_time, "00:00:00"))
+        END AS nextdate FROM Ev_events as e 
+        LEFT JOIN Ev_repeat_pattern as ep ON ep.event_id=e.id 
+        WHERE e.id=ev_id AND ep.repeat_type=ev_type;
+
+
+        
+        
+SELECT
+CASE WHEN eventtype=1 THEN nextdate(date,DATE_ADD())
+WHEN eventtype=2 THEN "The quantity is 30"
+WHEN eventtype=3 THEN "The quantity is 30"
+WHEN eventtype=4 THEN "The quantity is 30"
+ELSE "The quantity is under 30"
+END AS QuantityText
+FROM OrderDetails;
