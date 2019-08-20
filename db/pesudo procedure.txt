@@ -18,14 +18,6 @@ BEGIN
         END while;
  RETURN (nxtdate);
 END
-
-# IF nxtdate > 50000 THEN
- 		# SET nxtdate = CURRENT_TIMESTAMP();
- 		# ELSEIF (nxtdate <= 50000 AND srtdate >= 10000) THEN
- 		# SET  nxtdate =  CURRENT_TIMESTAMP();
- 		# ELSEIF nxtdate < 10000 THEN
- 		# SET  nxtdate = CURRENT_TIMESTAMP();
- 		# END IF;
         
 
 SELECT e.id, e.start_time,CASE ep.repeat_type
