@@ -6,16 +6,18 @@ function called nextdate
     -return the date greater than today
     -end the loop
 
-CREATE FUNCTION IF NOT EXIST nextdate(startdatetime,interval)
+DROP FUNCTION IF EXISTS nextdate;
+DELIMITER $$
+CREATE FUNCTION nextdate(startdatetime,interval)
         RETURN DATETIME
    BEGIN
         DECLARE nxtdate DATETIME
         select startdatetime into olddate
         WHILE nxtdate<CURRENT_TIMESTAMP() DO
         select ADDDATE(nxtdate,interval) INTO nxtdate
-        return nxtdate
-   END
-        
+        return nxtdate;
+   END$$
+DELIMITER ;    
 
 SELECT e.id, e.start_time,CASE ep.repeat_type
          WHEN 1 THEN TIMESTAMP(DATE_ADD(e.start_date, INTERVAL ep.interval_sep DAY),IFNULL(e.start_time, "00:00:00"))
