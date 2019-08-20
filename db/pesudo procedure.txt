@@ -14,10 +14,11 @@ BEGIN
     DECLARE nxtdate DATETIME;
     SELECT srtdate INTO nxtdate;
      while nxtdate<CURRENT_TIMESTAMP() do
-        select ADDDATE(nxtdate,DATEDIFF(srtdate,interv)) INTO nxtdate;
+        select ADDDATE(nxtdate,DATEDIFF(interv,srtdate)) INTO nxtdate;
         END while;
  RETURN (nxtdate);
-END
+END$$
+DELIMITER ;
         
 
 SELECT e.id, e.start_time,CASE ep.repeat_type
