@@ -1,2 +1,2 @@
-# trinity Dev_branch Branch
+# trinity Release_branch Branch
 **Church content and management system**
