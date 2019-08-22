@@ -264,6 +264,7 @@ include_once 'includes/ch_info.php';
                     </div>
                 </div>
     </section>
+
     <section>
        <div class="container-fliud">
            <div class="row no-spacing">
@@ -281,16 +282,36 @@ include_once 'includes/ch_info.php';
                </div>
                <div class="col-md-6">
                    <div class="event-wrapper">
+                   <?php include_once 'includes/event_preview.php' ?>
+
+                   <?php foreach($results as $key=>$res):
+                   
+                   $event_id=$res['id'];
+                   $event_name=$res['event_name'];
+                   $event_venue=$res['venue'];
+                   $event_flyer=$res['flyer_file_name'];
+                   $event_endtime=$res['end_time'];
+                   $event_starttime=$res['start_time'];
+                   $event_startdate=$res['start_date'];
+                   $event_enddate=$res['end_date'];
+                   $event_starttime_test=$res['startdate'];
+                   $startday=date('d',strtotime($event_starttime_test));
+                   $startMonthYr=date('M,Y',strtotime($event_starttime_test));
+                   ?>
+                      
                         <div class="event-container d-flex animate">
+
                                 <div class="eventa1 mr-4">
                                         <p>
-                                            <span>04</span>
-                                            <span>Aug 2019</span>
+                                            <span><?php //echo $startday ?>Every</span>
+                                            <span><?php //echo $startMonthYr ?> Last month</span>
                                         </p>
                                     </div>
                                     <div class="event-details">
-                                        <h5 class="mb-1"><a href="events.html">Saturday's Bible Reading</a></h5>
-                                        <p class="mb-2"><span>9:00am at ibeju-Lekki Lagos</span></p>
+                                        <h5 class="mb-1"><a href="events.php?e_id=<?php echo $event_id ?>"> <?php echo $event_name ?></a></h5>
+                                        <p class="mb-2">
+                                            <span class="start_time">
+                                                    <?php echo empty($event_starttime)?"All Day": Date("h:ia",strtotime($event_starttime_test)) ?></span> at <span class="venue"><?php echo $event_venue ?></span></p>
                                         <div class="img">
                                             <a href="#"><img src="images/event-3.jpg" alt="event-3 image" class="img-thumbnail"
                                                     height="200" width="300"></a>
@@ -298,23 +319,7 @@ include_once 'includes/ch_info.php';
                                     </div>
                                     
                          </div>
-                         <div class="eventa0 d-flex animate">
-                                <div class="eventa1 mr-4">
-                                        <p>
-                                            <span>04</span>
-                                            <span>Aug 2019</span>
-                                        </p>
-                                    </div>
-                                    <div class="event-details">
-                                        <h5 class="mb-1"><a href="events.html">Saturday's Bible Reading</a></h5>
-                                        <p class="mb-2"><span>9:00am at ibeju-Lekki Lagos</span></p>
-                                        <div class="img">
-                                            <a href="#"><img src="images/event-3.jpg" alt="event-3 image" class="img-thumbnail"
-                                                    height="200" width="300"></a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
+                    <?php endforeach?>
                    </div>
                </div>
            </div>
