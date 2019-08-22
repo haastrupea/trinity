@@ -21,7 +21,7 @@ if (isset($_SESSION['logged_in']) && isset($_SESSION['active_user'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.3.1-web/css/all.css">
-    <title>Wikytek Trinity Church Management System:Login</title>
+    <title>Church Management System:Login</title>
     <style>
         .log-cont {
             background-color: white;
