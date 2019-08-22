@@ -202,7 +202,7 @@ letter-spacing: 2px
    position: relative;
 }
 .branded .logo{
-    background: url(../images/christian-cross.svg) no-repeat;
+    background: url(../../images/christian-cross.svg) no-repeat;
     background-position: center;
     background-size: contain;
     width: 40px;

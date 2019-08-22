@@ -15,8 +15,8 @@ $fromindex=true;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>welcome-admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" media="screen" href="vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" media="screen" href="vendor/fontawesome-free-5.3.1-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../vendor/fontawesome-free-5.3.1-web/css/all.min.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/animate.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/font/admin-icon.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin-index.css">
