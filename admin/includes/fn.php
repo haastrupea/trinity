@@ -41,7 +41,7 @@ if(empty($message)){
 function fetch_video(String $Vid){
     $client = new Google_Client();
     $client->setApplicationName('fetching Sermon video from youtube');
-    $api_key="AIzaSyA3SRpI9-kH7rHZGO--PxwuZxmYzOoyeXM";
+    $api_key="google API key goes here";
     $client->setDeveloperKey($api_key);
     // Define service object for making API requests.
     $service = new Google_Service_YouTube($client);
